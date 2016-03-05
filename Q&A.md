@@ -26,3 +26,15 @@ A: To enable the swap you can use for example:
 /sbin/mkswap /var/swap.1
 /sbin/swapon /var/swap.1
 ```
+
+---
+
+Q: `[Composer\Downloader\TransportException] Your configuration does not allow connection to http://packagist.phpcomposer.com. See https://getcomposer.org/doc/06-config.md#secure-http for details.`
+
+A: `composer.json`
+
+```
+"config": {
+    "secure-http": false
+}
+```
