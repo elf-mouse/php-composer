@@ -38,3 +38,18 @@ A: `composer.json`
     "secure-http": false
 }
 ```
+
+---
+
+Q:
+
+```
+[ReflectionException]
+Class Fxp\Composer\AssetPlugin\Repository\NpmRepository does not exist
+```
+
+A:
+
+```
+composer global update fxp/composer-asset-plugin --no-plugins
+```
