@@ -29,7 +29,12 @@ A: To enable the swap you can use for example:
 
 ---
 
-Q: `[Composer\Downloader\TransportException] Your configuration does not allow connection to http://packagist.phpcomposer.com. See https://getcomposer.org/doc/06-config.md#secure-http for details.`
+Q:
+
+```
+[Composer\Downloader\TransportException]
+Your configuration does not allow connection to http://packagist.phpcomposer.com. See https://getcomposer.org/doc/06-config.md#secure-http for details.
+```
 
 A: `composer.json`
 
@@ -52,4 +57,19 @@ A:
 
 ```
 composer global update fxp/composer-asset-plugin --no-plugins
+```
+
+---
+
+Q:
+
+```
+[Composer\Downloader\TransportException]
+The "https://getcomposer.org/version" file could not be downloaded: failed to open stream: Operation timed out
+```
+
+A:
+
+```
+sudo sh -c "echo 'precedence ::ffff:0:0/96 100' >> /etc/gai.conf"
 ```
